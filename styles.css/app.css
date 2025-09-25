@@ -1,0 +1,23 @@
+#app {
+  display: flex;
+  position: relative;
+    & .nav-bar{
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding-inline: 8.5rem;
+      padding-block: 3.5rem;
+    }
+
+  #section-primary {
+    background-color: var(--background-primary);
+    width: 200vh;
+    height: 100vh;
+  }
+  #section-secondary {
+    background-color: var(--background-secondary);
+    width: 200vh;
+    height: 100vh;
+  }
+}
