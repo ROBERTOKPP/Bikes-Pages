@@ -15,14 +15,27 @@ body {
   color: white;
   overflow: hidden;
 }
-h1{
+@media (width < 1000px) {
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+
+h1 {
   font-size: 65px;
   font-weight: 600;
-  & span{
-    text-shadow: 0px 0px 12px rgba(255,52,101,0.77);
+  & span {
+    text-shadow: 0px 0px 12px rgba(255, 52, 101, 0.77);
     color: var(--light-pink);
   }
 }
+@media (width < 1000px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
 p {
   color: #adadad;
   & span {

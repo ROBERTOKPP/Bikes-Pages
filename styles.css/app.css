@@ -1,48 +1,48 @@
-#app {
+& .nav-bar {
+  position: absolute;
   display: flex;
-  position: relative;
-    & .nav-bar{
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding-inline: 8.5rem;
-      padding-block: 3.5rem;
-      & nav{
-        display: flex;
-        gap: 2rem;
-      }
-    }
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  padding-inline: 8.5rem;
+  padding-block: 3.5rem;
+  & nav {
+    display: flex;
+    gap: 2rem;
+  }
+}
 
+#app {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: 100vh;
   & #section-primary {
     background-color: var(--background-primary);
-    width: 200vh;
-    height: 100vh;
-    /* position: relative; */
-
-    & .sp-tittle{
+    position: relative;
+    & .sp-tittle {
       display: flex;
       flex-direction: column;
-      color: aliceblue;
+      color: white;
       max-width: 560px;
       position: absolute;
       left: 10%;
       top: 22%;
       z-index: 1;
     }
-    & .sp-bike{
+    & .sp-bike {
       position: absolute;
       bottom: -1%;
     }
-    
+    & img {
+      width: 95%;
+    }
   }
   & #section-secondary {
-    /* position: relative; */
     background-color: var(--background-secondary);
-    width: 200vh;
-    height: 100vh;
-
-    & .sc-reviews{
+    position: relative;
+    & .sc-reviews {
       background-color: var(--light-pink);
       padding: 1.375rem 3.375rem;
       border-radius: 1rem 0 0 1rem;
@@ -51,16 +51,127 @@
       top: 30%;
     }
 
-    & .sc-info{
+    & .sc-info {
       display: flex;
       justify-content: center;
       gap: 3.5rem;
-      div{
+      & div {
         display: flex;
         flex-direction: column;
-        & span{
+        & span {
           font-size: 19px;
           font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1280px) {
+  #app {
+    & #section-primary {
+      & .sp-tittle {
+        padding: 2.5rem;
+        left: 0;
+        top: 15%;
+        & h1 {
+          font-size: 3rem;
+        }
+      }
+      & img {
+        width: 95%;
+      }
+    }
+    & #section-secondary {
+      & .ss-bike {
+        & img {
+          padding-top: 25%;
+          width: 70%;
+        }
+      }
+      & .sc-reviews {
+        padding: 0.7rem 1.375rem;
+      }
+
+      & .sc-info {
+        gap: 1.5rem;
+        & div {
+          & span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width < 1000px) {
+  & .nav-bar {
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    & nav {
+      gap: .5rem;
+    }
+  }
+
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    & #section-primary {
+      position: initial;
+      & .sp-tittle {
+        padding-inline: 1rem;
+        margin-block: 150px 350px;
+        width: 100%;
+        position: initial;
+      }
+      & .sp-bike-mobile{
+
+        position: relative;
+        & .sp-bike {
+          position: absolute;
+          bottom: -1%;
+        }
+        & img {
+          width: 100%;
+        }
+      }
+    }
+
+
+    & #section-secondary {
+      position: initial;
+      & .sc-reviews {
+        padding: .5rem 1rem;
+        position: initial;
+        width: 100%;
+        margin-top: 3rem;
+        margin-left: 30%;
+      }
+
+      & .ss-bike{
+        & img{
+          width: 100%;
+        }
+      }
+
+      & .sc-info {
+        display: flex;
+        justify-content: space-between;
+        position: initial;
+        padding: 1rem;
+        gap: .5rem;
+        margin-bottom: 5rem;
+        & div {
+          display: flex;
+          flex-direction: column;
+          & span {
+            font-size: 12px;
+          }
+          & small{
+            font-size: 9px;
+          }
         }
       }
     }
