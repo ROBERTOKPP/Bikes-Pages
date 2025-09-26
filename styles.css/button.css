@@ -1,0 +1,19 @@
+.btn {
+  padding-block: 2rem;
+  display: flex;
+  gap: 1.8rem;
+  & .sp-btn-primary {
+    background-color: var(--light-pink);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.1875rem;
+    color: white;
+  }
+  & .sp-btn-secondary {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.1875rem;
+    color: white;
+  }
+}
