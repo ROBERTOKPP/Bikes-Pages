@@ -14,7 +14,7 @@
       }
     }
 
-  #section-primary {
+  & #section-primary {
     background-color: var(--background-primary);
     width: 200vh;
     height: 100vh;
@@ -36,7 +36,7 @@
     }
     
   }
-  #section-secondary {
+  & #section-secondary {
     /* position: relative; */
     background-color: var(--background-secondary);
     width: 200vh;
