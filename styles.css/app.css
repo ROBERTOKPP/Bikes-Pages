@@ -142,6 +142,7 @@
 
     & #section-secondary {
       position: initial;
+      overflow-x: hidden;
       & .sc-reviews {
         padding: .5rem 1rem;
         position: initial;
